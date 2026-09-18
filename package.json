@@ -1,0 +1,9 @@
+{
+  "name": "beachgypsycreations",
+  "private": true,
+  "description": "Dana Fink — Beach Gypsy Creations. Shell art raising funds for cancer care.",
+  "scripts": {
+    "start": "npx --yes serve -s . -l tcp://127.0.0.1:${PORT:-4173}",
+    "start:railway": "npx --yes serve -s . -l tcp://0.0.0.0:${PORT:-3000}"
+  }
+}
