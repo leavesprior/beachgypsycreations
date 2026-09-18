@@ -1,0 +1,31 @@
+name: Mirror to .art
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point this copy at the .art domain
+        run: |
+          printf 'beachgypsycreations.art\n' > CNAME
+          printf '%s\n' \
+            '# Beach Gypsy Creations (.art)' \
+            '' \
+            'Public mirror of https://beachgypsycreations.com' \
+            'Edit leavesprior/beachgypsycreations; this repo is filled by GitHub Actions.' \
+            > README.md
+      - name: Publish to beachgypsycreations-art
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ART_MIRROR_DEPLOY_KEY }}
+          external_repository: leavesprior/beachgypsycreations-art
+          publish_branch: main
+          publish_dir: .
+          force_orphan: true
+          exclude_assets: '.github,.gitignore'
+          commit_message: 'chore: mirror from beachgypsycreations'

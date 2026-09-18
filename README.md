@@ -11,7 +11,10 @@ npx --yes serve -s . -l tcp://127.0.0.1:4173
 
 Open http://127.0.0.1:4173
 
-Domains (Namecheap, 2026-09-17): `beachgypsycreations.com` was **available** at $11.28/yr. `.art` search opened in the Namecheap tab. Account **Sign in** is required to actually register — this repo does not contain payment.
+Live:
+
+- https://beachgypsycreations.com (this repo, GitHub Pages)
+- https://beachgypsycreations.art (mirror repo `leavesprior/beachgypsycreations-art`, filled by `.github/workflows/mirror-art.yml`)
 
 Railway: same provider as BOBR game (`golden-hooves-turing-ranch-production.up.railway.app`). `railway login` is currently unauthorized on this seat; deploy after Leif signs Railway in.
 
