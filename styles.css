@@ -122,7 +122,7 @@ h1 {
     0 30px 60px rgba(0,0,0,0.45);
   transform: rotate(-3.5deg);
 }
-.shell-well img { width: 100%; height: 100%; object-fit: cover; object-position: 8% 100%; transform: scale(1.45); transform-origin: 20% 90%; display: block; min-height: 22rem; }
+.shell-well img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block; min-height: 22rem; }
 .shell-well::after {
   content: "";
   position: absolute;
@@ -157,7 +157,7 @@ section h2 {
   gap: 0.85rem;
 }
 .gallery figure { margin: 0; position: relative; overflow: hidden; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; object-position: center 80%; display: block; filter: saturate(1.08) contrast(1.04); }
+.gallery img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; filter: saturate(1.08) contrast(1.04); }
 .gallery figcaption {
   position: absolute;
   left: 0.6rem;
@@ -168,11 +168,13 @@ section h2 {
   color: var(--foam);
   text-shadow: 0 1px 8px #000;
 }
-.g1 { grid-column: 1 / 8; grid-row: 1 / 3; min-height: 22rem; border-radius: 1.2rem 3.4rem 1.1rem 2.8rem; }
-.g2 { grid-column: 8 / 13; min-height: 10.5rem; border-radius: 40% 48% 38% 55%; }
-.g3 { grid-column: 8 / 13; min-height: 10.5rem; border-radius: 1.6rem 0.4rem 2.4rem 0.8rem; }
-.g4 { grid-column: 1 / 6; min-height: 12rem; border-radius: 50% 40% 48% 52%; }
-.g5 { grid-column: 6 / 13; min-height: 12rem; border-radius: 0.4rem 2rem 0.6rem 1.8rem; }
+.g1 { grid-column: 1 / 8; grid-row: 1 / 3; min-height: 24rem; border-radius: 1.2rem 3.4rem 1.1rem 2.8rem; }
+.g2 { grid-column: 8 / 13; min-height: 12rem; border-radius: 42% 48% 38% 52%; }
+.g3 { grid-column: 8 / 13; min-height: 12rem; border-radius: 1.6rem 0.4rem 2.4rem 0.8rem; }
+.g4 { grid-column: 1 / 5; min-height: 13rem; border-radius: 48% 40% 46% 52%; }
+.g5 { grid-column: 5 / 13; min-height: 13rem; border-radius: 0.5rem 1.8rem 0.6rem 1.6rem; }
+.g7 { grid-column: 1 / 7; min-height: 18rem; border-radius: 1.1rem 2.2rem 0.8rem 1.8rem; }
+.g8 { grid-column: 7 / 13; min-height: 18rem; border-radius: 2.2rem 0.8rem 1.8rem 1.1rem; }
 
 .ideas {
   display: grid;
@@ -255,6 +257,6 @@ footer a { color: var(--lantern); }
   header.hero { grid-template-columns: 1fr; }
   .shell-well { transform: none; min-height: 16rem; }
   .story { columns: 1; }
-  .g1, .g2, .g3, .g4, .g5 { grid-column: 1 / -1; min-height: 14rem; }
+  .g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8 { grid-column: 1 / -1; min-height: 14rem; }
   nav a { margin-left: 0.7rem; }
 }

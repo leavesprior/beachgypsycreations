@@ -38,41 +38,51 @@
         <a class="cta ghost" href="#request">Ask the tide</a>
       </div>
       <div class="shell-well">
-        <img src="art/peony-on-sand.png" alt="Painted peony disk with red rose rim on wet sand, Dana Fink" />
+        <img src="art/danna_shell1.jpg" alt="Painted peony disk with red rose rim on wet sand, Dana Fink" />
       </div>
     </header>
 
     <section id="available">
       <h2>Art currently on the tide table</h2>
-      <p class="why">Shells and florals only — no family snapshots. Pulled from Dana’s public Beachgypsycreations posts (facebook.com/TarotShop). More of the year’s tables go up as we pull the rest of the feed.</p>
+      <p class="why">Dana’s own photographs of the work — shells, florals, hangings. No family snapshots. Drop more <code>danna*.jpg</code> in Downloads and they hang here.</p>
       <div class="gallery">
         <figure class="g1">
-          <img src="art/peony-on-sand.png" alt="Peony disk with charcoal roses and red rim" />
-          <figcaption>Peony disk · rose rim</figcaption>
+          <img src="art/danna_shell4.jpg" alt="Five painted shells on sand: sunflower, peony, bloom bowl, green and purple scallops" />
+          <figcaption>Tide table · five at once</figcaption>
         </figure>
         <figure class="g2">
-          <img src="art/bloom-bowl.png" alt="Floral bloom bowl on sand" />
-          <figcaption>Bloom bowl</figcaption>
+          <img src="art/danna_shell1.jpg" alt="Peony disk with charcoal roses and red rim" />
+          <figcaption>Peony disk</figcaption>
         </figure>
         <figure class="g3">
-          <img src="art/scallop-purple-cluster.png" alt="Purple floral scallop" />
-          <figcaption>Scallop cluster</figcaption>
+          <img src="art/danna_shell3.jpg" alt="Purple scallop with roses, gems, and a butterfly" />
+          <figcaption>Butterfly scallop</figcaption>
         </figure>
         <figure class="g4">
-          <img src="art/mini-pink-shell.png" alt="Small pink floral shell" />
-          <figcaption>Pocket tide</figcaption>
+          <img src="art/danna_shell2.jpg" alt="Resin bloom bowl with pink and blue flowers, crushed-glass rim" />
+          <figcaption>Bloom bowl</figcaption>
         </figure>
         <figure class="g5">
-          <img src="art/lower-tide.png" alt="Several small painted shells on sand" />
-          <figcaption>Lower tide · minis</figcaption>
+          <img src="art/danna_shell_blue.jpg" alt="Hydrangea disk with brass dragonflies and cobalt glass" />
+          <figcaption>Dragonfly hydrangea</figcaption>
+        </figure>
+        <figure class="g7">
+          <img src="art/danna_shell_earrings1.jpg" alt="Hanging shells with beads, starfish, mermaid, and sand dollar" />
+          <figcaption>Tide hangers</figcaption>
+        </figure>
+        <figure class="g8">
+          <img src="art/danna_shell6.jpg" alt="Single hanging shell on driftwood with sand-dollar charm" />
+          <figcaption>Driftwood hanger</figcaption>
         </figure>
       </div>
       <ul class="stock">
-        <li><strong>Peony disk</strong> — round plate, charcoal roses, red rim, script numbers. <em>On the table.</em></li>
-        <li><strong>Bloom bowl</strong> — abalone-wash florals, pink into blue. <em>On the table.</em></li>
-        <li><strong>Scallop cluster</strong> — purple florals on a scallop. <em>On the table.</em></li>
-        <li><strong>Pocket tides</strong> — small shells, gift scale. <em>On the table.</em></li>
-        <li><strong>Saturday seat</strong> — 1:00–3:00 class. Message to hold. <em>Open.</em></li>
+        <li><strong>Peony disk</strong> — charcoal roses, red rim, script numbers. <em>On the table.</em></li>
+        <li><strong>Bloom bowl</strong> — pink into blue, crushed-glass rim. <em>On the table.</em></li>
+        <li><strong>Butterfly scallop</strong> — purple roses, gem butterfly. <em>On the table.</em></li>
+        <li><strong>Dragonfly hydrangea</strong> — brass flies, cobalt glass. <em>On the table.</em></li>
+        <li><strong>Tide hangers</strong> — shells on beads, starfish, mermaid. <em>On the table.</em></li>
+        <li><strong>Driftwood hanger</strong> — sand-dollar charm, one shell. <em>On the table.</em></li>
+        <li><strong>Saturday seat</strong> — 1:00–3:00 class. <em>Open.</em></li>
       </ul>
     </section>
 
@@ -116,8 +126,10 @@
           <select name="want" id="want">
             <option value="peony-disk">Peony disk (on the table)</option>
             <option value="bloom-bowl">Bloom bowl (on the table)</option>
-            <option value="scallop">Scallop cluster (on the table)</option>
-            <option value="pocket">Pocket tide mini (on the table)</option>
+            <option value="butterfly">Butterfly scallop (on the table)</option>
+            <option value="dragonfly">Dragonfly hydrangea (on the table)</option>
+            <option value="hangers">Tide hangers (on the table)</option>
+            <option value="driftwood">Driftwood hanger (on the table)</option>
             <option value="class">Saturday class seat 1–3</option>
             <option value="request">Artist request — I’ll describe it</option>
             <option value="ocean" selected>Ocean provides — surprise me</option>
@@ -157,5 +169,15 @@
       <span><a href="https://www.facebook.com/TarotShop">facebook.com/TarotShop</a> · <a href="https://beachgypsycreations.com">beachgypsycreations.com</a></span>
     </footer>
   </div>
+  <script>
+    document.getElementById("ask").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var body = "Name: " + f.name.value + "\nEmail: " + f.email.value + "\nWant: " + f.want.value + "\n\n" + f.body.value;
+      location.href = "mailto:leavesprior33@gmail.com?subject=" +
+        encodeURIComponent("Beach Gypsy Creations — order / request") +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
 </body>
 </html>
